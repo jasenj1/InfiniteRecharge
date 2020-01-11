@@ -17,6 +17,7 @@ import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import frc.paths.Dummy;
 import frc.paths.RightTurn;
 import frc.paths.TwoFeetForward;
 import frc.robot.drivetrain.Camera;
@@ -94,7 +95,7 @@ public class Robot extends TimedRobot {
   @Override
   public void autonomousInit() {
     getDrivetrain().resetHeading();
-    autonomousCommand = new PathFollower(new RightTurn());
+    autonomousCommand = new PathFollower(new Dummy());
     // autonomousCommand = new PathFollower("90 Degrees", true);
     // autonomousCommand = new AutoVisionDriving();
     // schedule the autonomous command (example)
